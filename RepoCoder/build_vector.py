@@ -33,6 +33,7 @@ class BagOfWords:
                 tqdm.tqdm.update(t)
             output_file_path = FilePathBuilder.one_gram_vector_path(self.input_file)
             Tools.dump_pickle(new_lines, output_file_path)
+            print(f"output file path: {output_file_path}")
 
 
 class BuildVectorWrapper:
@@ -46,6 +47,7 @@ class BuildVectorWrapper:
     def vectorize_repo_windows(self):
         for window_size, slice_size in itertools.product(self.window_sizes, self.slice_sizes):
             for repo in self.repos:
+                print("building repo windows for repo: {}, window_size: {}, slice_size: {}".format(repo, window_size, slice_size))
                 builder = self.vector_builder(
                     FilePathBuilder.repo_windows_path(repo, window_size, slice_size)
                 )
@@ -54,6 +56,7 @@ class BuildVectorWrapper:
     def vectorize_baseline_and_ground_windows(self):
         for window_size in self.window_sizes:
             for repo in self.repos:
+                print("building baseline and ground windows for repo: {}, window_size: {}".format(repo, window_size))
                 builder = self.vector_builder(FilePathBuilder.search_first_window_path(self.benchmark, CONSTANTS.rg, repo, window_size))
                 builder.build()
                 builder = self.vector_builder(FilePathBuilder.search_first_window_path(self.benchmark, CONSTANTS.gt, repo, window_size))

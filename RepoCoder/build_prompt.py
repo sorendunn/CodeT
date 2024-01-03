@@ -154,7 +154,6 @@ class BuildPromptWrapper:
     def build_first_search_prompt(self, mode, output_path):
         query_line_path_temp = functools.partial(FilePathBuilder.search_first_window_path, self.benchmark, mode)
         self._run(mode, query_line_path_temp, output_path)
-
     
     def build_prediction_prompt(self, mode, prediction_path, output_path):
         query_line_path_temp = functools.partial(FilePathBuilder.gen_first_window_path, self.benchmark, mode, prediction_path)

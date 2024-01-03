@@ -138,7 +138,7 @@ class GroundTruthWindowMaker:
                 }
             })
         print(f'build {len(code_windows)} ground truth windows for {self.repo} with window size {self.window_size}')
-        output_path = FilePathBuilder.search_first_window_path(self.benchmark, CONSTANTS.rg, self.repo, self.window_size)
+        output_path = FilePathBuilder.search_first_window_path(self.benchmark, CONSTANTS.gt, self.repo, self.window_size)
         Tools.dump_pickle(code_windows, output_path)
 
 class PredictionWindowMaker:
@@ -215,6 +215,7 @@ class MakeWindowWrapper:
         tasks = Tools.load_jsonl(self.task_file_path)
         for window_size in self.window_sizes:
             for repo in self.repos:
+                print(f"building windows for {repo} with window size {window_size}")
                 baseline_window_maker = BaselineWindowMaker(self.benchmark, repo, window_size, tasks)
                 ground_window_maker = GroundTruthWindowMaker(self.benchmark, repo, window_size, tasks)
                 baseline_window_maker.build_window()

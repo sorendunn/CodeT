@@ -1,0 +1,15 @@
+Repository,ScoreType,AverageScore,ProblemCount,TotalEvaluated,TotalCorrect
+pytorch_rl,EM,0.6667,3,16,5
+nerfstudio-project_nerfstudio,EM,0.3333,3,16,5
+huggingface_diffusers,EM,0.0,2,16,5
+opendilab_ACE,EM,0.0,3,16,5
+awslabs_fortuna,EM,0.3333,3,16,5
+alibaba_FederatedScope,EM,1.0,1,16,5
+google_vizier,EM,0.0,1,16,5
+pytorch_rl,ES,0.724,3,16,16
+nerfstudio-project_nerfstudio,ES,0.5863,3,16,16
+huggingface_diffusers,ES,0.2107,2,16,16
+opendilab_ACE,ES,0.467,3,16,16
+awslabs_fortuna,ES,0.4463,3,16,16
+alibaba_FederatedScope,ES,1.0,1,16,16
+google_vizier,ES,0.8824,1,16,16
