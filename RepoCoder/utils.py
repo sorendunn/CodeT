@@ -6,22 +6,22 @@ import glob
 import pickle
 import json
 import tiktoken
-from transformers import AutoTokenizer
+# from transformers import AutoTokenizer
 
 class CONSTANTS:
     # regular version for Codex
-    api_completion_benchmark = 'datasets/api_level_completion_2k_context_codex.test.jsonl'
-    random_line_completion_benchmark = 'datasets/line_level_completion_2k_context_codex.test.jsonl'
+    api_benchmark = 'datasets/api_level_completion_2k_context_codex.test.jsonl'
+    line_benchmark = 'datasets/line_level_completion_2k_context_codex.test.jsonl'
     # short version for CodeGen
-    short_api_completion_benchmark = 'datasets/api_level_completion_1k_context_codegen.test.jsonl'
-    short_random_line_completion_benchmark = 'datasets/line_level_completion_1k_context_codegen.test.jsonl'
+    short_api_benchmark = 'datasets/api_level_completion_1k_context_codegen.test.jsonl'
+    short_line_benchmark = 'datasets/line_level_completion_1k_context_codegen.test.jsonl'
     gt = 'gt'
     rg = 'r-g' # vanilla retrieval-augmented approach
     rgrg = 'r-g-r-g' # RepoCoder, two-stage retrieval and generation
 
 class FilePathBuilder:
-    api_completion_benchmark = 'datasets/api_level_completion_1k_context_codegen.test.jsonl'
-    random_line_completion_benchmark = 'datasets/line_level_completion_1k_context_codegen.test.jsonl'
+    api_completion_benchmark = 'datasets/api_level_completion_2k_context_codex.test.jsonl'
+    random_line_completion_benchmark = 'datasets/line_level_completion_2k_context_codex.test.jsonl'
     # short version for codegen
     short_api_completion_benchmark = 'datasets/api_level_completion_1k_context_codegen.test.jsonl'
     short_random_line_completion_benchmark = 'datasets/line_level_completion_1k_context_codegen.test.jsonl'
@@ -93,15 +93,15 @@ class CodexTokenizer:
     def decode(self, token_ids):
         return self.tokenizer.decode(token_ids)
 
-class CodeGenTokenizer:
-    def __init__(self):
-        self.tokenizer = AutoTokenizer.from_pretrained('Salesforce/codegen-6B-mono')
-
-    def tokenize(self, text):
-        return self.tokenizer.encode(text)
-
-    def decode(self, token_ids):
-        return self.tokenizer.decode(token_ids)
+# class CodeGenTokenizer:
+#    def __init__(self):
+#        self.tokenizer = AutoTokenizer.from_pretrained('Salesforce/codegen-6B-mono')
+#
+#    def tokenize(self, text):
+#        return self.tokenizer.encode(text)
+#
+#    def decode(self, token_ids):
+#        return self.tokenizer.decode(token_ids)
 
 class Tools:
     @staticmethod

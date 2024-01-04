@@ -4,7 +4,7 @@
 import functools
 import os
 
-from utils import Tools, FilePathBuilder, CodexTokenizer, CodeGenTokenizer, CONSTANTS
+from utils import Tools, FilePathBuilder, CodexTokenizer, CONSTANTS # CodeGenTokenizer,
 
 class PromptBuilder:
     def __init__(self, query_lines_with_retrieval_results, task_path, log_message, tokenizer):
@@ -86,7 +86,6 @@ class PromptBuilder:
     def build_2nd_stage_input_file(self, mode):
         new_prompt_lines = []
         for query_line in self.query_lines_with_retrieval_results:
-            print("building prompt for query line: {}".format(query_line))
             task_id = query_line['metadata']['task_id']
             task = self.tasks_by_task_id[task_id]
             old_prompt = task['prompt']
@@ -160,4 +159,3 @@ class BuildPromptWrapper:
     def build_prediction_prompt(self, mode, prediction_path, output_path):
         query_line_path_temp = functools.partial(FilePathBuilder.gen_first_window_path, self.benchmark, mode, prediction_path)
         self._run(mode, query_line_path_temp, output_path)
-

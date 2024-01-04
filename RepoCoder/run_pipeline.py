@@ -2,7 +2,7 @@
 # Licensed under the MIT license.
 
 import os
-os.environ["TOKENIZERS_PARALLELISM"] = "false"
+os.environ["TOKENIZERS_PARALLELISM"] = "true"
 
 from make_window import MakeWindowWrapper
 from build_vector import BuildVectorWrapper, BagOfWords
@@ -29,12 +29,12 @@ def run_RG1_and_oracle_method(benchmark, repos, window_sizes, slice_sizes):
     # build prompt for vanilla retrieval-augmented approach and ground truth
     tokenizer = CodexTokenizer
     mode = CONSTANTS.rg
-    output_file_path = 'prompts/rg-one-gram-ws-20-ss-2.jsonl'
+    output_file_path = 'prompts/rg-one-gram-ws-20-ss-2-fixed.jsonl'
     print("\nbuilding prompt for vanilla retrieval-augmented approach and ground truth\n")
     BuildPromptWrapper('one-gram', benchmark, repos, window_sizes[0], slice_sizes[0], tokenizer).build_first_search_prompt(mode, output_file_path)
 
     mode = CONSTANTS.gt
-    output_file_path = 'prompts/gt-one-gram-ws-20-ss-2.jsonl'
+    output_file_path = 'prompts/gt-one-gram-ws-20-ss-2-fixed.jsonl'
     BuildPromptWrapper('one-gram', benchmark, repos, window_sizes[0], slice_sizes[0], tokenizer).build_first_search_prompt(mode, output_file_path)
 
 
@@ -51,22 +51,21 @@ def run_RepoCoder_method(benchmark, repos, window_sizes, slice_sizes, prediction
 
 if __name__ == '__main__':
     repos = [
-        'pytorch_rl'
+        'pytorch_rl',
+        'huggingface_diffusers',
+        'awslabs_fortuna',
+        'huggingface_evaluate',
+        'google_vizier',
+        'alibaba_FederatedScope',
+        'pytorch_rl',
+        'opendilab_ACE',
     ]
-
-        # 'huggingface_diffusers'
-        # 'awslabs_fortuna',
-        # 'huggingface_evaluate',
-        # 'google_vizier',
-        # 'alibaba_FederatedScope',
-        # 'pytorch_rl',
-        # 'opendilab_ACE',
     
     window_sizes = [20]
     slice_sizes = [2]  # 20 / 2 = 10
 
     # build prompt for the RG1 and oracle methods
-    run_RG1_and_oracle_method(CONSTANTS.api_benchmark, repos, window_sizes, slice_sizes)
+    run_RG1_and_oracle_method(CONSTANTS.line_benchmark, repos, window_sizes, slice_sizes)
 
     # build prompt for the RepoCoder method
     # prediction_path = 'predictions/rg-one-gram-ws-20-ss-2_samples.0.jsonl'
