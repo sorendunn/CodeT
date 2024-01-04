@@ -1,10 +1,37 @@
 # Copyright (c) Microsoft Corporation.
 # Licensed under the MIT license.
-
+import csv
+import json
+import os
 import editdistance
 from collections import defaultdict
 
 from utils import Tools
+
+
+# Function to preprocess the completion string
+def preprocess_completion(completion):
+    # Extract content within ``
+    if '```python' in completion:
+        start = completion.find('```python') + 9  # Start index of content inside ``
+        end = completion.rfind('```')  # End index of content inside ``
+        completion = completion[start:end]
+    elif '```' in completion:
+        start = completion.find('```') + 3  # Start index of content inside ``
+        end = completion.rfind('```')  # End index of content inside ``
+        completion = completion[start:end]
+    elif '`' in completion:
+        start = completion.find('`') + 1  # Start index of content inside ``
+        end = completion.rfind('`')  # End index of content inside ``
+        completion = completion[start:end]
+
+    # Remove lines starting with '#'
+    lines = [line.split('#', 1)[0].rstrip() for line in completion.split('\n')]
+    # Save only the first non-empty line
+    for line in lines:
+        if line.strip():
+            return " ".join(line.split()).replace("( ", "(").replace(" )", ")")
+    return ""  # Return empty string if no non-empty lines are found
 
 def compute_EM(target, predictions, passk):
     target_lines = [line.strip() for line in target.splitlines() if line.strip()]
@@ -50,76 +77,81 @@ def compute_score_by_repo_with_metadata(repos, lines, stype, passk=1):
     for repo in avg_scores.keys():
         print(f'{avg_scores[repo]}\t{repo_count[repo]}\t{repo}')
 
-import csv
-from collections import defaultdict
-import csv
-from collections import defaultdict
+def calculate_similarities_and_export(repo_list, jsonl_lines, run_name):
+    # Initialize data structure to store the metrics
+    metrics = {
+        "run_name": run_name,
+        'average_es': 0,
+        'percent_exact_matches': 0,
+        'repo_metrics': {repo: {'es': 0, 'em': 0, 'count': 0} for repo in repo_list}
+    }
+    
+    # Process each JSONL line
+    for line in jsonl_lines:
+        data = line
+        ground_truth = data['metadata']['ground_truth']
+        generated_completion = data['choices'][0]["text"]
+        repo_name = data['metadata']['task_id'].split('/')[0]
 
-def compute_score_by_repo_with_metadata(repos, lines, stype, passk=1, csv_filename='results.csv'):
-    scores = defaultdict(list)
-    total_score_sum = 0
-    total_correct = 0
-    total_evaluated = 0
+        # Update overall metrics
+        metrics['average_es'] += compute_ES(ground_truth, [generated_completion], 1)
+        metrics['percent_exact_matches'] += compute_EM(ground_truth, [generated_completion], 1)
 
-    for line in lines:
-        repo = line['metadata']['task_id'].split('/')[0]
-        if repo not in repos:
-            continue
+        # Update per-repository metrics
+        repo_metric = metrics['repo_metrics'].get(repo_name)
+        if repo_metric:
+            repo_metric['es'] += compute_ES(ground_truth, [generated_completion], 1)
+            repo_metric['em'] += compute_EM(ground_truth, [generated_completion], 1)
+            repo_metric['count'] += 1
 
-        samples = [line['choices'][i]['text'] for i in range(len(line['choices']))]
+    # Calculate averages
+    num_lines = len(jsonl_lines)
+    metrics['average_es'] = round(metrics['average_es'] / num_lines, 2)
+    metrics['percent_exact_matches'] = round(metrics['percent_exact_matches'] / num_lines, 2)
 
-        if stype == 'EM':
-            score = compute_EM(line['metadata']['ground_truth'], samples, passk)
-        elif stype == 'ES':
-            score = compute_ES(line['metadata']['ground_truth'], samples, passk)
+    for repo, repo_metric in metrics['repo_metrics'].items():
+        if repo_metric['count'] > 0:
+            repo_metric['es'] = round( repo_metric['es'] / repo_metric['count'], 2)
+            repo_metric['em'] = round( repo_metric['em'] / repo_metric['count'], 2)
 
-        scores[repo].append(score)
-        if score:
-            total_correct += 1
-        total_evaluated += 1
-        total_score_sum += score
+    # Write results to CSV
+    csv_filename = 'results.csv'
+    file_exists = os.path.isfile(csv_filename)
 
-    avg_scores = {repo: round(sum(scores[repo]) / len(scores[repo]), 4) for repo in scores}
-    repo_count = {repo: len(scores[repo]) for repo in scores}
-    overall_average_score = round(total_score_sum / total_evaluated, 4) if total_evaluated > 0 else 0
-
-    # Log the overall score and scores by repository to CSV
     with open(csv_filename, 'a', newline='') as csvfile:
-        csv_writer = csv.DictWriter(csvfile,
-                                    fieldnames=["Repository", "ScoreType", "AverageScore", "ProblemCount",
-                                                "TotalEvaluated", "TotalCorrect"])
-        # Check if file is empty to write headers
-        csvfile.seek(0, 2)  # Seek to the end of the file
-        if csvfile.tell() == 0:  # If file is empty, write header
-            csv_writer.writeheader()
+        fieldnames = ["run_name",'overall_average_es', 'overall_percent_exact_matches'] + \
+                     [f'{repo}_es' for repo in repo_list] + \
+                     [f'{repo}_em' for repo in repo_list]
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
-        for repo, avg_score in avg_scores.items():
-            data_row = {
-                "Repository": repo,
-                "ScoreType": stype,
-                "AverageScore": avg_score,
-                "ProblemCount": repo_count[repo],
-                "TotalEvaluated": total_evaluated,
-                "TotalCorrect": total_correct
-            }
-            csv_writer.writerow(data_row)
+        if not file_exists:
+            writer.writeheader()
 
-    return overall_average_score, avg_scores, repo_count
+        writer.writerow({
+            "run_name": metrics['run_name'],
+            'overall_average_es': metrics['average_es'],
+            'overall_percent_exact_matches': metrics['percent_exact_matches'],
+            **{f'{repo}_es': repo_metric['es'] for repo, repo_metric in metrics['repo_metrics'].items()},
+            **{f'{repo}_em': repo_metric['em'] for repo, repo_metric in metrics['repo_metrics'].items()}
+        })
 
-if __name__ == '__main__':
-    repos = [
-        'huggingface_diffusers',
-        'nerfstudio-project_nerfstudio',
-        'awslabs_fortuna',
-        'huggingface_evaluate',
-        'google_vizier',
-        'alibaba_FederatedScope',
-        'pytorch_rl',
-        'opendilab_ACE',
-    ]
-    '''compute single prediction'''
-    relative_path = "processed_generations\line_level_completion_2k_context_codegen.test_0.1_generations.jsonl"
-    base_file = relative_path.split("\\")[-1].replace(".jsonl", "")
-    file_path = 'processed_generations/' + base_file + '.jsonl'
-    compute_score_by_repo_with_metadata(repos, Tools.load_jsonl(file_path), 'EM', passk=1, csv_filename="results/" + base_file + ".csv")
-    compute_score_by_repo_with_metadata(repos, Tools.load_jsonl(file_path), 'ES', passk=1, csv_filename="results/" + base_file + ".csv")
+
+repos = [
+    'huggingface_diffusers',
+    'nerfstudio-project_nerfstudio',
+    'awslabs_fortuna',
+    'huggingface_evaluate',
+    'google_vizier',
+    'alibaba_FederatedScope',
+    'pytorch_rl',
+    'opendilab_ACE',
+]
+
+'''compute single prediction'''
+base_file = "rg-one-gram-ws-20-ss-2-fixed_0.1_with_instructions_temp_0_generations_processed"
+file_path = 'processed_generations/' + base_file + '.jsonl'
+
+compute_score_by_repo_with_metadata(repos, Tools.load_jsonl(file_path), "EM", passk=1)
+compute_score_by_repo_with_metadata(repos, Tools.load_jsonl(file_path), 'ES', passk=1)
+
+calculate_similarities_and_export(repos, Tools.load_jsonl(file_path), base_file)

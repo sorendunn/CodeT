@@ -30,6 +30,7 @@ def run_RG1_and_oracle_method(benchmark, repos, window_sizes, slice_sizes):
     tokenizer = CodexTokenizer
     mode = CONSTANTS.rg
     output_file_path = 'prompts/rg-one-gram-ws-20-ss-2.jsonl'
+    print("\nbuilding prompt for vanilla retrieval-augmented approach and ground truth\n")
     BuildPromptWrapper('one-gram', benchmark, repos, window_sizes[0], slice_sizes[0], tokenizer).build_first_search_prompt(mode, output_file_path)
 
     mode = CONSTANTS.gt

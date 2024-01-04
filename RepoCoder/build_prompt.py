@@ -86,6 +86,7 @@ class PromptBuilder:
     def build_2nd_stage_input_file(self, mode):
         new_prompt_lines = []
         for query_line in self.query_lines_with_retrieval_results:
+            print("building prompt for query line: {}".format(query_line))
             task_id = query_line['metadata']['task_id']
             task = self.tasks_by_task_id[task_id]
             old_prompt = task['prompt']
@@ -136,12 +137,13 @@ class BuildPromptWrapper:
     def _run(self, mode, query_window_path_builder, output_file_path):
         workers = []
         for repo in self.repos:
+            print(f'loading query lines from {query_window_path_builder(repo, self.window_size)}')
             query_window_path = query_window_path_builder(repo, self.window_size)
             query_line_path = self.vector_path_builder(query_window_path)
             repo_window_path = FilePathBuilder.repo_windows_path(repo, self.window_size, self.slice_size)
             repo_embedding_path = self.vector_path_builder(repo_window_path)
             retrieval_results = FilePathBuilder.retrieval_results_path(query_line_path, repo_embedding_path, self.max_top_k)
-            
+            print(f'loading retrieval results from {retrieval_results}')
             query_lines_with_retrieval_results = Tools.load_pickle(retrieval_results)
             log_message = f'repo: {repo}, window: {self.window_size}, slice: {self.slice_size}'
             worker = PromptBuilder(query_lines_with_retrieval_results, self.task_path, log_message, self.tokenizer)
