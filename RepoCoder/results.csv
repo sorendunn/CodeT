@@ -1,3 +1,10 @@
 run_name,overall_average_es,overall_percent_exact_matches,huggingface_diffusers_es,nerfstudio-project_nerfstudio_es,awslabs_fortuna_es,huggingface_evaluate_es,google_vizier_es,alibaba_FederatedScope_es,pytorch_rl_es,opendilab_ACE_es,huggingface_diffusers_em,nerfstudio-project_nerfstudio_em,awslabs_fortuna_em,huggingface_evaluate_em,google_vizier_em,alibaba_FederatedScope_em,pytorch_rl_em,opendilab_ACE_em
 rg-one-gram-ws-20-ss-2-fixed_0.1_with_instructions_temp_0_generations,0.59,0.4,0.61,0,0.83,0.55,0.48,0.62,0.45,0.67,0.47,0,0.67,0.33,0.23,0.33,0.28,0.5
 rg-one-gram-ws-20-ss-2-fixed_0.1_with_instructions_temp_0_generations_processed,0.56,0.37,0.52,0,0.73,0.57,0.49,0.62,0.49,0.55,0.41,0,0.54,0.33,0.23,0.33,0.33,0.38
+rg-one-gram-ws-20-ss-2-fixed_0.1_with_instructions_temp_0_generations_no_system_not_processed,0.53,0.36,0.53,0,0.78,0.49,0.36,0.44,0.46,0.6,0.35,0,0.67,0.39,0.15,0.22,0.28,0.42
+rg-one-gram-ws-20-ss-2-fixed_0.1_with_instructions_temp_0_generations_processed,0.61,0.41,0.61,0,0.83,0.57,0.49,0.62,0.49,0.69,0.47,0,0.67,0.33,0.23,0.33,0.33,0.5
+rg-one-gram-ws-20-ss-2-fixed_0.1_temp_0_generations_processed,0.57,0.37,0.61,0,0.81,0.53,0.3,0.59,0.45,0.68,0.47,0,0.67,0.39,0.08,0.33,0.24,0.42
+rg-one-gram-ws-20-ss-2-one-line_0.1_instruct_generations,0.59,0.38,0.6,0,0.79,0.59,0.54,0.64,0.46,0.64,0.47,0,0.65,0.33,0.23,0.39,0.28,0.38
+rg-one-gram-ws-20-ss-2-one-line_0.1_instruct_generations_processed,0.61,0.39,0.6,0,0.83,0.64,0.54,0.64,0.47,0.64,0.47,0,0.7,0.39,0.23,0.39,0.28,0.38
+rg-one-gram-ws-20-ss-2-one-line_0.1_instruct_temp_0.5_generations,0.6,0.39,0.6,0,0.8,0.59,0.54,0.64,0.47,0.64,0.47,0,0.62,0.33,0.23,0.44,0.28,0.38
+rg-one-gram-ws-20-ss-2-one-line_0.1_instruct_temp_0.5_generations_processed,0.61,0.4,0.6,0,0.84,0.64,0.54,0.64,0.48,0.64,0.47,0,0.67,0.39,0.23,0.44,0.28,0.38

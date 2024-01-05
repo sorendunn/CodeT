@@ -1,0 +1,160 @@
+{"completion": ["\"-Wno-deprecated-declarations\","], "ground_truth": ["]"]}
+{"completion": ["parser.add_argument("], "ground_truth": ["parser.add_argument("]}
+{"completion": ["\"type {type(transform)}.\""], "ground_truth": ["f\"type {type(transform)} instead.\""]}
+{"completion": ["get_collector_task, judge_collector_finish"], "ground_truth": ["__init__, step"]}
+{"completion": [")"], "ground_truth": ["),"]}
+{"completion": ["yield from self._targets_loader()"], "ground_truth": ["yield from self._targets_loader()"]}
+{"completion": ["prob_output_layer: ProbOutputLayer,"], "ground_truth": ["prob_output_layer: ProbOutputLayer,"]}
+{"completion": ["class ResConvBlock(nn.Module):"], "ground_truth": ["self.conv = conv"]}
+{"completion": ["{"], "ground_truth": ["{"]}
+{"completion": ["scheduler_config = self.get_scheduler_config()"], "ground_truth": ["scheduler_config = self.get_scheduler_config()"]}
+{"completion": ["import torch"], "ground_truth": ["from functools import wraps"]}
+{"completion": ["can be used for training directly. A train sample can be a processed transition(DQN with nstep TD) or some continuous transitions(DRQN)."], "ground_truth": ["can be used for training directly. A train sample can be a processed transition(DQN with nstep TD) \\"]}
+{"completion": ["new_hook=hook_on_batch_start_inject_data,"], "ground_truth": ["new_hook=hook_on_batch_start_replace_data_batch,"]}
+{"completion": ["{"], "ground_truth": ["observation=UnboundedContinuousTensorSpec("]}
+{"completion": ["```python"], "ground_truth": ["if self.is_functional and params is None:"]}
+{"completion": ["validator=attr.validators.optional("], "ground_truth": ["kw_only=True)"]}
+{"completion": ["options = rpc.TensorPipeRpcBackendOptions("], "ground_truth": ["if rank == 0:"]}
+{"completion": ["```"], "ground_truth": ["del td"]}
+{"completion": ["prohibited.add(\"done\")"], "ground_truth": ["prohibited.add(\"done\")"]}
+{"completion": ["calib_data_loader=calib_data_loader,"], "ground_truth": ["calib_data_loader=calib_data_loader,"]}
+{"completion": ["("], "ground_truth": ["("]}
+{"completion": ["cfg.federate.sample_client_num = participated_client_num"], "ground_truth": ["non_sample_case = cfg.federate.method in [\"local\", \"global\"]"]}
+{"completion": ["raise ModuleNotFoundError"], "ground_truth": ["return \"missing\""]}
+{"completion": ["self, tensordict: Optional[TensorDictBase] = None, **kwargs"], "ground_truth": ["self, tensordict: Optional[TensorDictBase] = None, **kwargs"]}
+{"completion": ["self.comm_manager.send("], "ground_truth": ["buffer = self.msg_buffer['eval'][state]"]}
+{"completion": ["conv: ModuleDef = nn.Conv"], "ground_truth": ["conv: ModuleDef = nn.Conv"]}
+{"completion": ["_init_collect, _forward_collect, _reset_collect, _process_transition, _init_eval, _forward_eval\\"], "ground_truth": ["_init_collect, _forward_collect, _reset_collect, _process_transition, _init_eval, _forward_eval\\"]}
+{"completion": ["f\"Invalid destination '{dest}', please choose a valid destination.\""], "ground_truth": ["f\"The hook collection {dest} is not recognised. Choose from:\""]}
+{"completion": ["def test_impala():"], "ground_truth": ["def test_atoc():"]}
+{"completion": ["self._studies_table.c.study_name == study.name)"], "ground_truth": ["self._studies_table.c.study_name == study.name"]}
+{"completion": ["model must have been calibrated beforehand."], "ground_truth": ["model must have been calibrated beforehand."]}
+{"completion": ["int_max_value = int(max_value)"], "ground_truth": ["int_max_value = int(max_value)"]}
+{"completion": ["def reset(self, tensordict: TensorDictBase) -> TensorDictBase:"], "ground_truth": ["if \"_observation_spec\" not in self.__dir__():"]}
+{"completion": ["val_data_loader=self.reg_val_data_loader,"], "ground_truth": ["val_data_loader=self.reg_val_data_loader,"]}
+{"completion": ["return tensordict[self.priority_key].flatten()"], "ground_truth": ["tensordict = tensordict.clone(recurse=False)"]}
+{"completion": ["```"], "ground_truth": ["def send_learn_info(self, learn_info: dict) -> None:"]}
+{"completion": ["images = images.cpu().permute(0, 2, 3, 1).numpy()"], "ground_truth": ["images = images.cpu().permute(0, 2, 3, 1).numpy()"]}
+{"completion": ["Callable, Tuple, Optional, Any"], "ground_truth": ["import torch"]}
+{"completion": ["self._algorithm.update(tuner_trial.dna, reward)"], "ground_truth": ["self._algorithm.feedback(tuner_trial.dna, reward)"]}
+{"completion": ["```py"], "ground_truth": ["evaluation_module = evaluation_module_factory("]}
+{"completion": ["scheduler = scheduler_class(**scheduler_config)"], "ground_truth": ["scheduler = scheduler_class(**scheduler_config)"]}
+{"completion": [") -> Dict[str, jnp.ndarray]:"], "ground_truth": [") -> Dict[str, jnp.ndarray]:"]}
+{"completion": ["hpc_action = hpc_action.cuda()"], "ground_truth": ["hpc_action = hpc_action.cuda()"]}
+{"completion": ["self.evaluation_module_names = [module.name for module in self.evaluation_modules]"], "ground_truth": ["self.evaluation_module_names = [module.name for module in self.evaluation_modules]"]}
+{"completion": ["default=\"LazyMemmapStorage\","], "ground_truth": ["default=\"LazyMemmapStorage\","]}
+{"completion": ["```python"], "ground_truth": ["device_id: Device for featurization. Supply a GPU id (e.g. 0 or 3) to use GPU. If no GPU with this id is found, use CPU"]}
+{"completion": ["import torch"], "ground_truth": ["import platform"]}
+{"completion": ["```python"], "ground_truth": ["max_length (int): maximum sequence length."]}
+{"completion": ["results = recall_metric.compute(references=[0, 0, 1, 1, 1], predictions=[0, 1, 0, 1, 1], sample_weight=sample_weight)"], "ground_truth": [">>> results = recall_metric.compute(references=[0, 0, 1, 1, 1], predictions=[0, 1, 0, 1, 1], sample_weight=sample_weight)"]}
+{"completion": ["5.0, 4.0, 3.0, 2.0, -5.0],"], "ground_truth": ["[11.0, -1.0, 7.0, -1.0, 20.0],"]}
+{"completion": ["self._fun = fun"], "ground_truth": ["self._fun = fun"]}
+{"completion": ["mystorage.set(idx, td)"], "ground_truth": ["tc_sample = mystorage.get(idx)"]}
+{"completion": ["from ding.config import read_config, compile_config"], "ground_truth": ["from ding.config import read_config, compile_config"]}
+{"completion": ["```python"], "ground_truth": ["self.assertTrue(np.isfinite(lp))"]}
+{"completion": ["from federatedscope.core.auxiliaries.runner_builder import get_runner"], "ground_truth": ["from federatedscope.core.auxiliaries.runner_builder import get_runner"]}
+{"completion": ["# The callback function `callback_fn` has been defined."], "ground_truth": ["if step == 1:"]}
+{"completion": ["metric.compute()"], "ground_truth": ["metric.add_batch(references=refs, predictions=preds)"]}
+{"completion": [], "ground_truth": ["except StopIteration:"]}
+{"completion": ["dataset = TUDataset(root=self.root, name=name)"], "ground_truth": ["dataset = TUDataset(self.root, name)"]}
+{"completion": ["for line in lines:"], "ground_truth": ["for line in lines:"]}
+{"completion": ["if not initialized:"], "ground_truth": ["reset_kwargs = data"]}
+{"completion": ["def test_mujoco(self, env_name, frame_skip, from_pixels, pixels_only):"], "ground_truth": ["@pytest.mark.skipif(not (_has_dmc and _has_gym), reason=\"gym or dm_control not present\")"]}
+{"completion": ["{\"start\": 0, \"entity\": \"B-LOC\"},"], "ground_truth": ["{\"start\": 0, \"entity\": \"B-LOC\"},"]}
+{"completion": ["return results"], "ground_truth": ["return results"]}
+{"completion": ["return (pred_prev_sample,)"], "ground_truth": ["return (pred_prev_sample, state)"]}
+{"completion": ["return size + idx"], "ground_truth": ["return size + idx"]}
+{"completion": ["plt.title(\"value\")"], "ground_truth": ["plt.title(\"value\")"]}
+{"completion": ["tsf_loc = ("], "ground_truth": ["tsf_loc = ("]}
+{"completion": ["action_dim_gsde, state_dim_gsde = None, None"], "ground_truth": ["action_dim_gsde, state_dim_gsde = None, None"]}
+{"completion": ["dropout_rate=self.dropout_rate,"], "ground_truth": ["dropout_rate=self.dropout_rate,"]}
+{"completion": ["Temperature parameter determines the relative importance of the entropy term against the reward."], "ground_truth": ["12 | ``learn.``          bool        False          | Determine whether to use        | Temperature parameter"]}
+{"completion": ["calib_config=self.class_calib_config_nodir_nodump,"], "ground_truth": ["calib_config=self.class_calib_config_nodir_nodump,"]}
+{"completion": ["return EnvMetaData.build_metadata_from_env(env_or_creator(**kwargs))"], "ground_truth": ["if kwargs is None:"]}
+{"completion": ["kwargs[\"num_inference_steps\"] = num_inference_steps"], "ground_truth": ["kwargs[\"num_inference_steps\"] = num_inference_steps"]}
+{"completion": ["return list(self._child_parameter_configs)"], "ground_truth": ["return copy.deepcopy(list(self._child_parameter_configs))"]}
+{"completion": [". to_tensordict()"], "ground_truth": [".to_tensordict()"]}
+{"completion": ["def readable(self, *args, **kwargs):"], "ground_truth": ["return False"]}
+{"completion": ["jnp.float32"], "ground_truth": ["Parameters `dtype`"]}
+{"completion": ["tempfile.TemporaryDirectory() as temp_dir:"], "ground_truth": ["with tempfile.TemporaryDirectory() as dirname:"]}
+{"completion": ["}"], "ground_truth": ["},"]}
+{"completion": ["calib_config=self.reg_calib_config_nodir_nodump,"], "ground_truth": ["calib_config=self.reg_calib_config_nodir_nodump,"]}
+{"completion": ["_has_ts = False"], "ground_truth": ["_has_ts = False"]}
+{"completion": ["import jax"], "ground_truth": ["from jax._src.prng import PRNGKeyArray"]}
+{"completion": ["config = [deepcopy(cooperative_navigation_coma_config), deepcopy(cooperative_navigation_coma_create_config)]"], "ground_truth": ["config = [deepcopy(cooperative_navigation_coma_config), deepcopy(cooperative_navigation_coma_create_config)]"]}
+{"completion": ["def make_env("], "ground_truth": ["return cfg"]}
+{"completion": ["True"], "ground_truth": ["print(\"projected action: \\n\", env.action_spec.project(action))"]}
+{"completion": ["\"_convert_to_functional\", self._convert_to_functional)"], "ground_truth": ["param_name,"]}
+{"completion": ["del tdmodule[3]"], "ground_truth": ["del tdmodule[3]"]}
+{"completion": ["*args,"], "ground_truth": ["cls,"]}
+{"completion": ["inputs = {"], "ground_truth": ["mask_image = load_image("]}
+{"completion": ["x = self.encoder_model(impared_data)"], "ground_truth": ["return degree, gen_feat, nc_pred[:raw_data.num_nodes]"]}
+{"completion": ["collect_demo_data("], "ground_truth": ["collect_demo_data("]}
+{"completion": ["image_mask = image_mask.astype(np.float32) / 255.0"], "ground_truth": ["masked_image = image * (image_mask < 127.5)"]}
+{"completion": ["kernel: tfpk.PositiveSemidefiniteKernel,"], "ground_truth": ["use_retrying_cholesky: bool = True,"]}
+{"completion": ["predictions: array-like of shape (n_samples,) or (n_samples, n_outputs)"], "ground_truth": ["predictions: array-like of shape (n_samples,) or (n_samples, n_outputs)"]}
+{"completion": ["yield from self._inputs_loader()"], "ground_truth": ["yield from self._inputs_loader()"]}
+{"completion": ["UpdateWeights,"], "ground_truth": ["Trainer,"]}
+{"completion": ["elif isinstance(elem, Mapping):"], "ground_truth": ["elif isinstance(elem, float):"]}
+{"completion": ["*args,"], "ground_truth": ["*args,"]}
+{"completion": ["The estimated log-pdf for each output."], "ground_truth": ["An evaluation of the log-pdf for each data point."]}
+{"completion": ["self._total_step = 0"], "ground_truth": ["self._traj_buffer = {env_id: TrajBuffer(self._traj_len) for env_id in range(self._env_num)}"]}
+{"completion": ["```"], "ground_truth": ["connected = ftp_head(url)"]}
+{"completion": ["if isinstance(replay_path, str):"], "ground_truth": ["if isinstance(replay_path, str):"]}
+{"completion": ["return Loader(lambda value: _COMPARE_OPERATORS[op](first(value), second(value)))"], "ground_truth": ["return Loader("]}
+{"completion": ["return torch.tensor(value, dtype=dtype, device=device)"], "ground_truth": ["if dtype is not None:"]}
+{"completion": ["n_data=100,"], "ground_truth": ["n_data=10,"]}
+{"completion": ["download_config=download_config,"], "ground_truth": ["download_desc=download_config.download_desc,"]}
+{"completion": ["while True:"], "ground_truth": ["while True:"]}
+{"completion": ["file.write(data)"], "ground_truth": ["progress_bar.update(len(data))"]}
+{"completion": ["```"], "ground_truth": ["raise RuntimeError("]}
+{"completion": ["MultiDeviceCalibModelCalibrator)"], "ground_truth": ["MultiDeviceCalibModelCalibrator)"]}
+{"completion": ["cfg.data.type = 'toy'"], "ground_truth": ["cfg.data.type = 'toy'"]}
+{"completion": ["global_obs_shape: int,"], "ground_truth": ["global_obs_shape: int,"]}
+{"completion": ["normalized_sent = sacremoses.MosesTokenizer().tokenize(sentence, return_str=True, escape=False)"], "ground_truth": ["elif tokenizer == \"penn\":"]}
+{"completion": ["def __call__(self, x: jnp.ndarray, train: bool = True) -> jnp.ndarray:"], "ground_truth": ["def __call__(self, x: jnp.ndarray,) -> jnp.ndarray:"]}
+{"completion": ["plt.title(\"value\")"], "ground_truth": ["plt.title(\"value\")"]}
+{"completion": ["for f in onlyfiles:"], "ground_truth": ["for file_name in onlyfiles:"]}
+{"completion": ["```python"], "ground_truth": ["self._trial = self._trial_client.materialize()"]}
+{"completion": ["ParallelEnv("], "ground_truth": ["spec=None,"]}
+{"completion": [], "ground_truth": ["s = 0.0"]}
+{"completion": ["size = 4"], "ground_truth": ["num_inference_steps = 10"]}
+{"completion": ["Number of target samples to draw when computing quantiles."], "ground_truth": ["Number of target samples to sample for each input data point."]}
+{"completion": ["self.assertFalse(improved)"], "ground_truth": ["self.assertFalse(improved)"]}
+{"completion": ["config = [deepcopy(bitflip_her_dqn_config), deepcopy(bitflip_her_dqn_create_config)]"], "ground_truth": ["try:"]}
+{"completion": ["c.NotebookApp.ip = '0.0.0.0'"], "ground_truth": ["c.ServerApp.ip = \"0.0.0.0\""]}
+{"completion": ["scores: Optional[Array] = None,"], "ground_truth": ["scores: Optional[Array] = None,"]}
+{"completion": ["policy_output = self._policy[1].forward(obs, **self._cfg.collect_setting)"], "ground_truth": ["assert not self._eval_flag"]}
+{"completion": ["self.msg_buffer['eval'][self.state]['feature_importance'][message.sender] = feature_importance"], "ground_truth": ["sender = message.sender"]}
+{"completion": ["py_study_config = vz.StudyConfig("], "ground_truth": ["py_study_config = vz.StudyConfig("]}
+{"completion": ["'please make sure to switch to the correct mode before accessing the batch and epoch numbers.'"], "ground_truth": ["f'will use `{mode}` to calculate `ctx.var`.')"]}
+{"completion": ["'tensorflow': ['tensorflow>=2.0.0'],"], "ground_truth": ["'jax': _parse_requirements('requirements-jax.txt'),"]}
+{"completion": ["self.assertEqual(results[\"accuracy\"], 1.0)"], "ground_truth": ["self.assertAlmostEqual(results[\"total_time_in_seconds\"], 0.1, 1)"]}
+{"completion": ["safety_checker is not None and feature_extractor is not None:"], "ground_truth": ["image quality. This pipeline requires a value of at least `1`."]}
+{"completion": ["test_data"], "ground_truth": ["test_targets: y of test data"]}
+{"completion": ["start_index = batch * batch_size"], "ground_truth": ["start_index = batch * batch_size"]}
+{"completion": ["spec = None"], "ground_truth": ["spec = None"]}
+{"completion": ["def create_evaluator_env_cfg(cfg: dict) -> List[dict]:"], "ground_truth": ["def create_evaluator_env_cfg(cfg: dict) -> List[dict]:"]}
+{"completion": [".select(*self.qvalue_network.in_keys)"], "ground_truth": [".select(*self.qvalue_network.in_keys)"]}
+{"completion": ["transformer=transformer,"], "ground_truth": ["transformer=transformer,"]}
+{"completion": ["When `\"auto\"`, halves the input to the attention heads, so attention will be computed in two steps. If a number is provided, uses as many slices as `attention_head_dim // slice_size`. In this case, `attention_head_dim` must be a multiple of `slice_size`."], "ground_truth": ["When `\"auto\"`, halves the input to the attention heads, so attention will be computed in two steps. If"]}
+{"completion": ["def _set_seed_initial(self, seed: int) -> None:  # noqa: F811"], "ground_truth": ["def _set_seed_initial(self, seed: int) -> None:  # noqa: F811"]}
+{"completion": ["num_images_per_prompt (`int`, *optional*, defaults to 1):"], "ground_truth": ["num_images_per_prompt (`int`, *optional*, defaults to 1):"]}
+{"completion": ["bellman_max, c_val, dv_val, vtrace"], "ground_truth": ["generalized_advantage_estimate,"]}
+{"completion": ["not _has_functorch, reason=\"functorch not installed\")"], "ground_truth": ["not _has_functorch, reason=f\"functorch not installed: {FUNCTORCH_ERR}\""]}
+{"completion": ["f\"Invalid destination '{dest}', please choose a valid destination.\""], "ground_truth": ["f\"The hook collection {dest} is not recognised. Choose from:\""]}
+{"completion": ["import os"], "ground_truth": ["import os"]}
+{"completion": ["model_id=\"username/repo\","], "ground_truth": ["model_id=\"username/repo\","]}
+{"completion": ["SafeModule("], "ground_truth": ["in_keys=dist_in_keys,"]}
+{"completion": ["\"\"\"Values for Trial.Status.\"\"\""], "ground_truth": ["UNKNOWN = 'UNKNOWN'"]}
+{"completion": ["config['federate.total_round_num'] = self._cfg.hpo.sha.budgets:"], "ground_truth": ["self._cfg.hpo.sha.budgets):"]}
+{"completion": ["Batch = Tuple[Array, Array]"], "ground_truth": ["OptaxOptimizer = GradientTransformation"]}
+{"completion": ["for i, pad_idx in enumerate(num_non_padding):"], "ground_truth": ["for i, pad_idx in enumerate(num_non_padding):"]}
+{"completion": ["\"test_shared: shared=shared\""], "ground_truth": ["},"]}
+{"completion": ["Init eval model with argmax strategy and hidden_state plugin."], "ground_truth": ["Init eval model with argmax strategy and the hidden_state plugin."]}
+{"completion": ["\"image\": init_image,"], "ground_truth": ["\"image\": init_image,"]}
+{"completion": ["# test bounds"], "ground_truth": ["assert \"b\" not in td.keys()"]}
+{"completion": ["self.ID = message.content"], "ground_truth": ["content = message.content"]}
+{"completion": ["_, idx = model(data)"], "ground_truth": ["_, idx = model(data)"]}
+{"completion": ["The user can define and use customized network model but must obey the same inferface definition indicated \\"], "ground_truth": ["The user can define and use customized network model but must obey the same inferface definition indicated \\"]}
+{"completion": ["SafeProbabilisticSequential("], "ground_truth": ["SafeProbabilisticSequential("]}

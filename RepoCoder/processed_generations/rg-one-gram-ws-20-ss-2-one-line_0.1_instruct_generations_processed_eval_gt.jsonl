@@ -1,0 +1,160 @@
+{"completion": ["\"-Wno-deprecated-declarations\","], "ground_truth": ["]"]}
+{"completion": ["yield from self._targets_loader()"], "ground_truth": ["yield from self._targets_loader()"]}
+{"completion": ["hidden_states = self.Conv2d_0(hidden_states)"], "ground_truth": ["self.conv = conv"]}
+{"completion": ["return self.__task_complete(result)"], "ground_truth": ["self.__task_complete(result)"]}
+{"completion": ["\"type {type(transform)}.\""], "ground_truth": ["f\"type {type(transform)} instead.\""]}
+{"completion": ["prohibited.add(\"done\")"], "ground_truth": ["prohibited.add(\"done\")"]}
+{"completion": ["parser.add_argument("], "ground_truth": ["parser.add_argument("]}
+{"completion": ["assert \"_eps_gSDE\" in td.keys()"], "ground_truth": ["assert not spec.is_in(td.get(\"action\"))"]}
+{"completion": ["learner_conn.append(replica_conn)"], "ground_truth": ["dns_name = replica_conn.split(\":\")[0]"]}
+{"completion": ["validator=attr.validators.optional("], "ground_truth": ["kw_only=True)"]}
+{"completion": ["}"], "ground_truth": ["}"]}
+{"completion": ["cfg.federate.sample_cfg_valid = sample_cfg_valid"], "ground_truth": ["non_sample_case = cfg.federate.method in [\"local\", \"global\"]"]}
+{"completion": ["calib_data_loader=calib_data_loader,"], "ground_truth": ["calib_data_loader=calib_data_loader,"]}
+{"completion": ["spec[k], dtype=dtype, device=device, categorical_action_encoding=categorical_action_encoding"], "ground_truth": ["spec[k],"]}
+{"completion": ["scheduler_config = self.get_scheduler_config()"], "ground_truth": ["scheduler_config = self.get_scheduler_config()"]}
+{"completion": ["conv: ModuleDef = nn.Conv"], "ground_truth": ["conv: ModuleDef = nn.Conv"]}
+{"completion": ["{"], "ground_truth": ["{"]}
+{"completion": ["\"-Wno-deprecated-declarations\","], "ground_truth": ["]"]}
+{"completion": ["new_hook=hook_on_batch_start_count_round,"], "ground_truth": ["new_hook=hook_on_batch_start_replace_data_batch,"]}
+{"completion": ["calib_targets_loader: TargetsLoader,"], "ground_truth": ["predict_fn: Callable[[jnp.ndarray], jnp.ndarray],"]}
+{"completion": ["prob_output_layer: ProbOutputLayer,"], "ground_truth": ["prob_output_layer: ProbOutputLayer,"]}
+{"completion": ["prc_queue_out,"], "ground_truth": ["prc_queue_in,"]}
+{"completion": ["model must have been calibrated beforehand."], "ground_truth": ["model must have been calibrated beforehand."]}
+{"completion": ["def test_brax_consistency(self, envname, batch_size, requires_grad):"], "ground_truth": ["key, *keys = jax.random.split(key, np.prod(batch_size) + 1)"]}
+{"completion": ["self, tensordict: Optional[TensorDictBase] = None, **kwargs"], "ground_truth": ["self, tensordict: Optional[TensorDictBase] = None, **kwargs"]}
+{"completion": ["return tensordict[self.priority_key].mean(dim=tensordict.batch_dims)"], "ground_truth": ["tensordict = tensordict.clone(recurse=False)"]}
+{"completion": ["def test_impala():"], "ground_truth": ["def test_atoc():"]}
+{"completion": ["import os"], "ground_truth": ["from typing import Tuple"]}
+{"completion": ["("], "ground_truth": ["("]}
+{"completion": ["images = images.cpu().permute(0, 2, 3, 1).numpy()"], "ground_truth": ["images = images.cpu().permute(0, 2, 3, 1).numpy()"]}
+{"completion": ["{'mse': 2.75}"], "ground_truth": ["{'mse': 0.375}"]}
+{"completion": ["self.eval_finish_flag = True"], "ground_truth": ["buffer = self.msg_buffer['eval'][state]"]}
+{"completion": ["import gym"], "ground_truth": ["return \"missing\""]}
+{"completion": ["env.set_seed(seed)"], "ground_truth": ["env.set_seed(seed)"]}
+{"completion": ["calib_config=calib_config,"], "ground_truth": ["calib_config=calib_config,"]}
+{"completion": ["self._studies_table.c.study_name == study.name)"], "ground_truth": ["self._studies_table.c.study_name == study.name"]}
+{"completion": ["the IoU is computed as the average of the IoU scores for each class."], "ground_truth": ["the mean IoU of the image is calculated by taking the IoU of each class and averaging them."]}
+{"completion": [") -> Dict[str, jnp.ndarray]:"], "ground_truth": [") -> Dict[str, jnp.ndarray]:"]}
+{"completion": ["device = next(value_network.parameters()).device"], "ground_truth": ["except StopIteration:"]}
+{"completion": ["_init_collect, _forward_collect, _reset_collect, _process_transition, _init_eval, _forward_eval\\"], "ground_truth": ["_init_collect, _forward_collect, _reset_collect, _process_transition, _init_eval, _forward_eval\\"]}
+{"completion": ["int_min_value"], "ground_truth": ["int_max_value = int(max_value)"]}
+{"completion": ["self._algorithm.update(tuner_trial.dna, reward)"], "ground_truth": ["self._algorithm.feedback(tuner_trial.dna, reward)"]}
+{"completion": ["from .normalization import build_normalization"], "ground_truth": ["import torch"]}
+{"completion": ["addscore = 2 * addscore_precision * addscore_recall / (addscore_precision + addscore_recall)"], "ground_truth": ["addscore = 2 * addscore_precision * addscore_recall / (addscore_precision + addscore_recall)"]}
+{"completion": ["class EnvMetaData:"], "ground_truth": ["if \"_observation_spec\" not in self.__dir__():"]}
+{"completion": ["from_pixels = kwargs.pop(\"from_pixels\", False)"], "ground_truth": ["from_pixels = kwargs.pop(\"from_pixels\", False)"]}
+{"completion": ["torch.cuda.synchronize()"], "ground_truth": ["print('epoch: {}, original qntd rescale cost time: {}'.format(i, time.time() - t))"]}
+{"completion": ["self._fun = fun"], "ground_truth": ["self._fun = fun"]}
+{"completion": ["5.0, 4.0, 3.0, 2.0, -5.0],"], "ground_truth": ["[11.0, -1.0, 7.0, -1.0, 20.0],"]}
+{"completion": ["from federatedscope.core.auxiliaries.runner_builder import get_runner"], "ground_truth": ["from federatedscope.core.auxiliaries.runner_builder import get_runner"]}
+{"completion": ["config.DOWNLOADED_EVALUATE_PATH"], "ground_truth": ["cache_dir = config.HF_EVALUATE_CACHE"]}
+{"completion": ["args.learning_rate * args.gradient_accumulation_steps * args.train_batch_size * accelerator.num_processes)"], "ground_truth": ["args.learning_rate"]}
+{"completion": ["# Import necessary libraries and modules"], "ground_truth": ["parser = argparse.ArgumentParser("]}
+{"completion": ["beta_end: float = 0.02,"], "ground_truth": ["beta_end: float = 0.02,"]}
+{"completion": ["# The main loop for training the agent and updating the networks"], "ground_truth": ["reset_at_each_iter=False,"]}
+{"completion": ["},"], "ground_truth": ["},"]}
+{"completion": ["s_arr[i] = float((z[i]**2 + z[i + 1]**2)**0.5) + 0.5 * (z[i]**2 + z[i + 1]**2)**0.5 * (math.sin(50 * (z[i]**2 + z[i + 1]**2)**0.1)**2 + 1)"], "ground_truth": ["s = 0.0"]}
+{"completion": ["collect_demo_data("], "ground_truth": ["collect_demo_data("]}
+{"completion": ["except ImportError as error:"], "ground_truth": ["from federatedscope.cl.loss import *"]}
+{"completion": ["\"\"\""], "ground_truth": ["Computes CUAD scores (EM, F1, AUPR, Precision@80%Recall, and Precision@90%Recall)."]}
+{"completion": ["pixels - stats[\"pixels_mean\"]) / stats[\"pixels_std\"]"], "ground_truth": ["(255 * (pixels * stats[\"scale\"] + stats[\"loc\"]))"]}
+{"completion": ["return size + idx"], "ground_truth": ["return size + idx"]}
+{"completion": ["import datasets"], "ground_truth": ["}"]}
+{"completion": ["DDPG paper, Gaussian process in ours."], "ground_truth": ["|                                                     |                                   | DDPG paper, Guassian"]}
+{"completion": ["if rank == 0:"], "ground_truth": ["if rank == 0:"]}
+{"completion": ["idx = list(range(1, td.shape[0] - 1))"], "ground_truth": ["tc_sample = mystorage.get(idx)"]}
+{"completion": ["from .trainers import ("], "ground_truth": ["from .replay_buffer import make_replay_buffer"]}
+{"completion": ["response = ftp_get(url, stream=True)"], "ground_truth": ["ftp_get(url, temp_file)"]}
+{"completion": ["dataset = TUDataset(self.root, name)"], "ground_truth": ["dataset = TUDataset(self.root, name)"]}
+{"completion": ["Tuple[Callable[[jnp.ndarray, jnp.ndarray, Array], Union[float, Array]], ...]] = None,"], "ground_truth": ["Tuple[Callable[[jnp.ndarray, Array], Union[float, Array]], ...]"]}
+{"completion": ["\"test_modeling\" in file_or_dir and file_or_dir.endswith(\".py\") and file_or_dir not in _ignore_files:"], "ground_truth": ["filename = os.path.split(path)[-1]"]}
+{"completion": ["dropout_rate=self.dropout_rate,"], "ground_truth": ["dropout_rate=self.dropout_rate,"]}
+{"completion": ["from ..utils.dummy_torch_and_transformers_and_k_diffusion_objects import *  # noqa F403"], "ground_truth": ["except OptionalDependencyNotAvailable:"]}
+{"completion": ["spec = None"], "ground_truth": ["spec = None"]}
+{"completion": ["tsf_loc = ("], "ground_truth": ["tsf_loc = ("]}
+{"completion": ["baseline_benchmark_state_factory: benchmarks.BenchmarkStateFactory,"], "ground_truth": ["baseline_benchmark_state_factory: benchmarks.BenchmarkStateFactory,"]}
+{"completion": ["action is in bounds?"], "ground_truth": ["print(\"projected action: \\n\", env.action_spec.project(action))"]}
+{"completion": ["import os"], "ground_truth": ["import os"]}
+{"completion": ["*args,"], "ground_truth": ["cls,"]}
+{"completion": ["import jax"], "ground_truth": ["from jax._src.prng import PRNGKeyArray"]}
+{"completion": ["\"_param_maps\", self._param_maps)"], "ground_truth": ["param_name,"]}
+{"completion": ["index = torch.randint(0, len(storage), (batch_size,))"], "ground_truth": ["return index, {}"]}
+{"completion": ["def test_float16_inference(self):"], "ground_truth": ["def test_save_load_float16(self):"]}
+{"completion": ["calib_config=self.reg_calib_config_nodir_nodump,"], "ground_truth": ["calib_config=self.reg_calib_config_nodir_nodump,"]}
+{"completion": [">>> predictions = [0, 1, 0, 0, 1]"], "ground_truth": [">>> predictions = [0, 1, 1, 0, 0]"]}
+{"completion": ["return degree, gen_feat, nc_pred[:impared_data.num_nodes]"], "ground_truth": ["return degree, gen_feat, nc_pred[:raw_data.num_nodes]"]}
+{"completion": ["image_mask = image_mask.astype(np.float32) / 255.0"], "ground_truth": ["masked_image = image * (image_mask < 127.5)"]}
+{"completion": ["UpdateWeights,"], "ground_truth": ["Trainer,"]}
+{"completion": ["constraints: Optional[sp.Constraint] = None,"], "ground_truth": ["use_retrying_cholesky: bool = True,"]}
+{"completion": ["*args,"], "ground_truth": ["*args,"]}
+{"completion": ["self._traj_buffer = {env_id: [TrajBuffer(self._traj_len)] for env_id in range(self._env_num)}"], "ground_truth": ["self._traj_buffer = {env_id: TrajBuffer(self._traj_len) for env_id in range(self._env_num)}"]}
+{"completion": ["from .ddpg import DDPGPolicy"], "ground_truth": ["from .ppo import PPOPolicy, PPOOffPolicy"]}
+{"completion": ["An evaluation of the log-pdf for each output."], "ground_truth": ["An evaluation of the log-pdf for each data point."]}
+{"completion": [">>> references = [[\"does this sentence match\", \"does this sentence match!?!\"],"], "ground_truth": [">>> references = [[\"does this sentence match\", \"does this sentence match!?!\"],"]}
+{"completion": ["from ding.league.metric import LeagueMetricEnv"], "ground_truth": ["from ding.utils import import_module, read_file, save_file, LockContext, LockContextType, LEAGUE_REGISTRY, \\"]}
+{"completion": ["return torch.tensor(value, dtype=dtype, device=device)"], "ground_truth": ["if dtype is not None:"]}
+{"completion": ["\"\"\""], "ground_truth": ["while True:"]}
+{"completion": ["for x, t in zip(evaluation_modules, evaluation_module_types)"], "ground_truth": ["for x, t in zip(evaluation_modules, evaluation_module_types)"]}
+{"completion": ["n_data=10,"], "ground_truth": ["n_data=10,"]}
+{"completion": ["progress_bar.update(len(data))"], "ground_truth": ["progress_bar.update(len(data))"]}
+{"completion": ["kernel_size=_kernel,"], "ground_truth": ["kernel_size=_kernel,"]}
+{"completion": ["MultiDeviceCalibModelCalibrator)"], "ground_truth": ["MultiDeviceCalibModelCalibrator)"]}
+{"completion": ["self._monitor.format_eval_res(results,"], "ground_truth": ["f\"[Local/Global mode] Client #{self.ID} has been \""]}
+{"completion": ["Pretty name for the task. If not provided, the task id will be used as the default name."], "ground_truth": ["dataset_config (`str`, *optional*):"]}
+{"completion": ["pixels - stats[\"pixels_mean\"]) / stats[\"pixels_std\"]"], "ground_truth": ["(255 * (pixels * stats[\"scale\"] + stats[\"loc\"]))"]}
+{"completion": ["global_obs_shape: int,"], "ground_truth": ["global_obs_shape: int,"]}
+{"completion": ["self._trial = self._trial_client.materialize()"], "ground_truth": ["self._trial = self._trial_client.materialize()"]}
+{"completion": ["def __call__(self, x: Array, train: bool = True) -> Array:"], "ground_truth": ["def __call__(self, x: jnp.ndarray,) -> jnp.ndarray:"]}
+{"completion": ["f\"Invalid destination '{dest}', please choose a valid destination.\""], "ground_truth": ["f\"The hook collection {dest} is not recognised. Choose from:\""]}
+{"completion": ["for f in onlyfiles:"], "ground_truth": ["for file_name in onlyfiles:"]}
+{"completion": ["Number of target samples to draw when computing quantiles."], "ground_truth": ["Number of target samples to sample for each input data point."]}
+{"completion": ["size = 4"], "ground_truth": ["num_inference_steps = 10"]}
+{"completion": ["self.assertFalse(improved)"], "ground_truth": ["self.assertFalse(improved)"]}
+{"completion": ["'key': d['value']}),"], "ground_truth": ["'data': json.dumps(d)"]}
+{"completion": ["c.NotebookApp.notebook_dir = '/path/to/notebook/directory'"], "ground_truth": ["c.ServerApp.ip = \"0.0.0.0\""]}
+{"completion": ["scores: Optional[Array] = None,"], "ground_truth": ["scores: Optional[Array] = None,"]}
+{"completion": ["time.sleep(0.1)"], "ground_truth": ["time.sleep(0.1)"]}
+{"completion": ["else:"], "ground_truth": ["else:"]}
+{"completion": ["return results"], "ground_truth": ["return results"]}
+{"completion": [".where("], "ground_truth": ["query = query.where("]}
+{"completion": ["The name of the column containing the input data in the dataset specified by `data`."], "ground_truth": ["the name of the column containing the input audio path in the dataset specified by `data`."]}
+{"completion": ["'pandas': ['pandas>=1.0.0'],"], "ground_truth": ["'jax': _parse_requirements('requirements-jax.txt'),"]}
+{"completion": ["test_data"], "ground_truth": ["test_targets: y of test data"]}
+{"completion": ["start_index = batch * batch_size"], "ground_truth": ["start_index = batch * batch_size"]}
+{"completion": ["image quality. This pipeline requires a value of at least `1`."], "ground_truth": ["image quality. This pipeline requires a value of at least `1`."]}
+{"completion": ["def create_evaluator_env_cfg(cfg: dict) -> List[dict]:"], "ground_truth": ["def create_evaluator_env_cfg(cfg: dict) -> List[dict]:"]}
+{"completion": ["tensordict = TensorDict({}, self.batch_size, device=self.device)"], "ground_truth": ["tensordict = TensorDict({}, self.batch_size, device=self.device)"]}
+{"completion": ["transformer=transformer,"], "ground_truth": ["transformer=transformer,"]}
+{"completion": [".select(*self.qvalue_network.in_keys)"], "ground_truth": [".select(*self.qvalue_network.in_keys)"]}
+{"completion": ["When `\"auto\"`, halves the input to the attention heads, so attention will be computed in two steps. If a number is provided, uses as many slices as `attention_head_dim // slice_size`. In this case, `attention_head_dim` must be a multiple of `slice_size`."], "ground_truth": ["When `\"auto\"`, halves the input to the attention heads, so attention will be computed in two steps. If"]}
+{"completion": ["kwargs[\"num_inference_steps\"] = num_inference_steps"], "ground_truth": ["kwargs[\"num_inference_steps\"] = num_inference_steps"]}
+{"completion": ["if not initialized:"], "ground_truth": ["reset_kwargs = data"]}
+{"completion": [], "ground_truth": ["if kwargs is None:"]}
+{"completion": ["import importlib"], "ground_truth": ["\"PLBartDecoder\","]}
+{"completion": ["predictions: array-like of shape (n_samples,) or (n_samples, n_outputs)"], "ground_truth": ["predictions: array-like of shape (n_samples,) or (n_samples, n_outputs)"]}
+{"completion": ["config = [deepcopy(cooperative_navigation_coma_config), deepcopy(cooperative_navigation_coma_create_config)]"], "ground_truth": ["config = [deepcopy(cooperative_navigation_coma_config), deepcopy(cooperative_navigation_coma_create_config)]"]}
+{"completion": ["(1, 0, preds_0, refs_0, None, tmp_dir, 0),"], "ground_truth": ["(1, 0, preds_0, refs_0, None, tmp_dir, 0),"]}
+{"completion": ["env.set_seed(seed)"], "ground_truth": ["env.set_seed(seed)"]}
+{"completion": ["(\"_\", \"belief\"),"], "ground_truth": ["\"_\","]}
+{"completion": ["The name of the column in the dataset that contains the input data."], "ground_truth": ["the name of the column containing the input text in the dataset specified by `data`."]}
+{"completion": ["proto.value.string_value = parameter_value.value"], "ground_truth": ["proto.value.string_value = parameter_value.value"]}
+{"completion": [","], "ground_truth": ["feature_extractor: Union[\"PreTrainedTokenizerBase\", \"FeatureExtractionMixin\"] = None,  # noqa: F821"]}
+{"completion": ["for i, pad_idx in enumerate(num_non_padding):"], "ground_truth": ["for i, pad_idx in enumerate(num_non_padding):"]}
+{"completion": ["in_keys=[(\"next\", \"state\"), (\"next\", \"belief\")], out_keys=[\"reward\"]"], "ground_truth": ["in_keys=[(\"next\", \"state\"), (\"next\", \"belief\")],"]}
+{"completion": ["tensordict.set(out_key, torch.zeros_like(tensordict.get(in_key)))"], "ground_truth": ["if out_key in tensordict.keys():"]}
+{"completion": ["\"image\": init_image,"], "ground_truth": ["\"image\": init_image,"]}
+{"completion": ["value_to_set = getattr("], "ground_truth": ["key = (\"target_\" + key[0], *key[1:])"]}
+{"completion": ["raise NotImplementedError"], "ground_truth": ["content = message.content"]}
+{"completion": ["return labels if self.criterion == 'cross_entropy' else one_hot(labels, logits.size(1))"], "ground_truth": ["N = logits.shape[1]"]}
+{"completion": ["MultiHeadLinear(5, 4, 3, 2),"], "ground_truth": ["in_keys=dist_in_keys,"]}
+{"completion": ["_, idx = model(data)"], "ground_truth": ["_, idx = model(data)"]}
+{"completion": ["elif isinstance(elem, Mapping):"], "ground_truth": ["elif isinstance(elem, float):"]}
+{"completion": ["SafeModule("], "ground_truth": ["SafeProbabilisticSequential("]}
+{"completion": ["dict(flip_sign=False, safety_threshold=5.0),"], "ground_truth": ["dict(flip_sign=True, safety_threshold=-5.0),"]}
+{"completion": ["return out"], "ground_truth": ["return out"]}
+{"completion": ["self._cfg.hpo.sha.budgets) - 1:"], "ground_truth": ["self._cfg.hpo.sha.budgets):"]}
+{"completion": ["Array = Union[jnp.ndarray, np.ndarray]"], "ground_truth": ["OptaxOptimizer = GradientTransformation"]}
+{"completion": ["Init eval model with argmax strategy and hidden_state plugin."], "ground_truth": ["Init eval model with argmax strategy and the hidden_state plugin."]}
+{"completion": ["create_env_kwargs={\"seed\": seed},"], "ground_truth": ["frames_per_batch=frames_per_batch,"]}
+{"completion": ["if self.mixer:"], "ground_truth": ["action = action.reshape(T * B, A).unsqueeze(-1)"]}

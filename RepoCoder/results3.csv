@@ -1,0 +1,2 @@
+run_name,overall_average_es,overall_percent_exact_matches,huggingface_diffusers_es,nerfstudio-project_nerfstudio_es,awslabs_fortuna_es,huggingface_evaluate_es,google_vizier_es,alibaba_FederatedScope_es,pytorch_rl_es,opendilab_ACE_es,huggingface_diffusers_em,nerfstudio-project_nerfstudio_em,awslabs_fortuna_em,huggingface_evaluate_em,google_vizier_em,alibaba_FederatedScope_em,pytorch_rl_em,opendilab_ACE_em
+rg-one-gram-ws-20-ss-2-one-line_0.1_instruct_temp_0.5_generations,0.6,0.39,0.6,0,0.8,0.59,0.54,0.64,0.47,0.64,0.47,0,0.62,0.33,0.23,0.44,0.28,0.38

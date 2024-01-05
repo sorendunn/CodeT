@@ -115,7 +115,7 @@ def calculate_similarities_and_export(repo_list, jsonl_lines, run_name):
             repo_metric['em'] = round( repo_metric['em'] / repo_metric['count'], 2)
 
     # Write results to CSV
-    csv_filename = 'results.csv'
+    csv_filename = 'results4.csv'
     file_exists = os.path.isfile(csv_filename)
 
     with open(csv_filename, 'a', newline='') as csvfile:
@@ -124,8 +124,8 @@ def calculate_similarities_and_export(repo_list, jsonl_lines, run_name):
                      [f'{repo}_em' for repo in repo_list]
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
-        if not file_exists:
-            writer.writeheader()
+        # if not file_exists:
+        writer.writeheader()
 
         writer.writerow({
             "run_name": metrics['run_name'],
@@ -148,7 +148,7 @@ repos = [
 ]
 
 '''compute single prediction'''
-base_file = "rg-one-gram-ws-20-ss-2-fixed_0.1_with_instructions_temp_0_generations_processed"
+base_file = "rg-one-gram-ws-20-ss-2-one-line_0.1_instruct_gpt-3.5-0301_generations_processed"
 file_path = 'processed_generations/' + base_file + '.jsonl'
 
 compute_score_by_repo_with_metadata(repos, Tools.load_jsonl(file_path), "EM", passk=1)
