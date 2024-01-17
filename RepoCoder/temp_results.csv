@@ -1,0 +1,11 @@
+run_name,overall_average_es,overall_percent_exact_matches,huggingface_diffusers_es,nerfstudio-project_nerfstudio_es,awslabs_fortuna_es,huggingface_evaluate_es,google_vizier_es,alibaba_FederatedScope_es,pytorch_rl_es,opendilab_ACE_es,huggingface_diffusers_em,nerfstudio-project_nerfstudio_em,awslabs_fortuna_em,huggingface_evaluate_em,google_vizier_em,alibaba_FederatedScope_em,pytorch_rl_em,opendilab_ACE_emrg-one-gram-ws-20-ss-2-one-line_0.1_instruct_10_variants_raw_generations,0.61,0.44,0.06,0,0.08,0.05,0.06,0.06,0.06,0.06,0.05,0,0.06,0.04,0.04,0.03,0.04,0.05
+rg-one-gram-ws-20-ss-2-one-line_0.1_instruct_pass_at_10_raw_generations,0.46,0.27,0.04,0,0.07,0.04,0.04,0.05,0.04,0.04,0.02,0,0.05,0.02,0.02,0.03,0.02,0.03,,,,,,,,,,,,,,,,,,
+rg-one-gram-ws-20-ss-2-one-line_0.1_instruct_pass_at_10_generations_processed,0.64,0.39,0.06,0,0.08,0.08,0.06,0.06,0.06,0.06,0.04,0,0.06,0.04,0.02,0.04,0.03,0.04,,,,,,,,,,,,,,,,,,
+rg-one-gram-ws-20-ss-2-one-line_0.1_instruct_merged_infile_subset_comp_llama_raw_generations,0.62,0.37,0.45,0,0.92,0.7,0.73,0.45,0.58,0.49,0.29,0,0.9,0.38,0.4,0.0,0.32,0.2
+rg-one-gram-ws-20-ss-2-one-line_0.1_instruct_merged_infile_subset_comp_llama_generations_processed,0.62,0.37,0.45,0,0.92,0.7,0.73,0.45,0.58,0.49,0.29,0,0.9,0.38,0.4,0.0,0.32,0.2
+rg-one-gram-ws-20-ss-2-one-line_0.1_instruct_infile_snippets_10_raw_generations,0.61,0.38,0.06,0,0.07,0.06,0.05,0.07,0.06,0.05,0.05,0,0.05,0.03,0.02,0.04,0.04,0.03
+rg-one-gram-ws-20-ss-2-one-line_0.1_instruct_infile_snippets_10_generations_processed,0.7,0.44,0.07,0,0.09,0.07,0.07,0.08,0.06,0.06,0.05,0,0.06,0.04,0.03,0.04,0.04,0.03
+rg-one-gram-ws-20-ss-2-one-line_0.1_instruct_infile_snippets_10_raw_generations,0.61,0.38,0.06,0,0.07,0.06,0.05,0.07,0.06,0.05,0.05,0,0.05,0.03,0.02,0.04,0.04,0.03
+rg-one-gram-ws-20-ss-2-one-line_0.1_instruct_infile_snippets_10_generations_processed,0.7,0.44,0.07,0,0.09,0.07,0.07,0.08,0.06,0.06,0.05,0,0.06,0.04,0.03,0.04,0.04,0.03
+rg-one-gram-ws-20-ss-2-one-line_0.1_instruct_10_variants_comp_llama_raw_generations,0.78,0.63,0.09,0,0.09,0.07,0.07,0.08,0.07,0.08,0.08,0,0.08,0.05,0.05,0.06,0.05,0.07
+rg-one-gram-ws-20-ss-2-one-line_0.1_instruct_10_variants_comp_llama_generations_processed,0.78,0.63,0.09,0,0.09,0.07,0.07,0.08,0.07,0.08,0.08,0,0.08,0.05,0.05,0.06,0.05,0.07

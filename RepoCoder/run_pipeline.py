@@ -16,25 +16,25 @@ def make_repo_window(repos, window_sizes, slice_sizes):
     worker.window_for_repo_files()
 
 def run_RG1_and_oracle_method(benchmark, repos, window_sizes, slice_sizes):
-    # build code snippets for all the repositories
-    make_repo_window(repos, window_sizes, slice_sizes)
-    # build code snippets for vanilla retrieval-augmented approach and ground truth
-    MakeWindowWrapper(benchmark, repos, window_sizes, slice_sizes).window_for_baseline_and_ground()
-    # build vector for vanilla retrieval-augmented approach and ground truth
-    vectorizer = BagOfWords
-    BuildVectorWrapper(benchmark, vectorizer, repos, window_sizes, slice_sizes).vectorize_baseline_and_ground_windows()
-    BuildVectorWrapper(benchmark, vectorizer, repos, window_sizes, slice_sizes).vectorize_repo_windows()
-    # search code for vanilla retrieval-augmented approach and ground truth
-    CodeSearchWrapper('one-gram', benchmark, repos, window_sizes, slice_sizes).search_baseline_and_ground()
-    # build prompt for vanilla retrieval-augmented approach and ground truth
+    # # build code snippets for all the repositories
+    # make_repo_window(repos, window_sizes, slice_sizes)
+    # # build code snippets for vanilla retrieval-augmented approach and ground truth
+    # MakeWindowWrapper(benchmark, repos, window_sizes, slice_sizes).window_for_baseline_and_ground()
+    # # build vector for vanilla retrieval-augmented approach and ground truth
+    # vectorizer = BagOfWords
+    # BuildVectorWrapper(benchmark, vectorizer, repos, window_sizes, slice_sizes).vectorize_baseline_and_ground_windows()
+    # BuildVectorWrapper(benchmark, vectorizer, repos, window_sizes, slice_sizes).vectorize_repo_windows()
+    # # search code for vanilla retrieval-augmented approach and ground truth
+    # CodeSearchWrapper('one-gram', benchmark, repos, window_sizes, slice_sizes).search_baseline_and_ground()
+    # # build prompt for vanilla retrieval-augmented approach and ground truth
     tokenizer = CodexTokenizer
     mode = CONSTANTS.rg
-    output_file_path = 'prompts/rg-one-gram-ws-20-ss-2-fixed.jsonl'
+    output_file_path = 'prompts/rg-one-gram-ws-20-ss-10-context-1000.jsonl'
     print("\nbuilding prompt for vanilla retrieval-augmented approach and ground truth\n")
     BuildPromptWrapper('one-gram', benchmark, repos, window_sizes[0], slice_sizes[0], tokenizer).build_first_search_prompt(mode, output_file_path)
 
     mode = CONSTANTS.gt
-    output_file_path = 'prompts/gt-one-gram-ws-20-ss-2-fixed.jsonl'
+    output_file_path = 'prompts/gt-one-gram-ws-20-ss-10-context-1000.jsonl'
     BuildPromptWrapper('one-gram', benchmark, repos, window_sizes[0], slice_sizes[0], tokenizer).build_first_search_prompt(mode, output_file_path)
 
 
@@ -62,7 +62,7 @@ if __name__ == '__main__':
     ]
     
     window_sizes = [20]
-    slice_sizes = [2]  # 20 / 2 = 10
+    slice_sizes = [10]  # 20 / 2 = 10
 
     # build prompt for the RG1 and oracle methods
     run_RG1_and_oracle_method(CONSTANTS.line_benchmark, repos, window_sizes, slice_sizes)

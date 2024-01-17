@@ -12,7 +12,7 @@ class PromptBuilder:
         self.log_message = log_message
         if tokenizer == CodexTokenizer:
             self.tokenizer = CodexTokenizer()
-            self.max_retrieval_length = 2000  # half of the max length of the model
+            self.max_retrieval_length = 1000  # half of the max length of the model
         elif tokenizer == CodeGenTokenizer:
             self.tokenizer = CodeGenTokenizer()
             self.max_retrieval_length = 1000
